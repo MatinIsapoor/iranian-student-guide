@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>راهنمای دانشجویان ایرانی خارج از کشور</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <span class="eyebrow">🎓 راهنمای زندگی دانشجویی</span>
+    <h1>یه راهنمای ساده برای روزهای اول توی کشور جدید</h1>
+    <p>وقتی تازه به یه کشور جدید می‌رسی، هزارتا سوال کوچیک هست که هیچ‌کس بهت نمی‌گه: از کجا سیم‌کارت بگیرم؟ حساب بانکی چطور باز می‌شه؟ اجاره‌خونه یعنی چی امضا کنم؟ این سایت رو برای همین سوال‌ها ساختیم، کشور به کشور.</p>
+    <div class="ornament"><span class="line"></span><span></span><span class="line"></span></div>
+  </header>
+  <main>
+    {% if general %}
+    <div class="section-title">
+      <h2>قبل از هر چیز</h2>
+    </div>
+    <a class="card featured-card" href="{{ url_for('category_page', country_code='general', category='arrival') }}">
+      <span class="flag">{{ general.flag }}</span>
+      <div>
+        <h3>{{ general.name }}: {{ general['categories']['arrival'].title }}</h3>
+        <p>یه چک‌لیست عمومی که برای هر کشوری کاربرد داره - از قبل از پرواز تا استقرار کامل</p>
+      </div>
+    </a>
+    {% endif %}
+    <div class="section-title">
+      <h2>کشور خودت رو انتخاب کن</h2>
+      <span class="count">{{ countries|length }} کشور</span>
+    </div>
+    <div class="card-list">
+      {% for code, country in countries.items() %}
+      <a class="card" href="{{ url_for('country_page', country_code=code) }}">
+        <span class="flag">{{ country.flag }}</span>
+        <div>
+          <h3>{{ country.name }}</h3>
+          <p>راهنمای خرید، بانک، سیم‌کارت و مسکن در {{ country.name }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <footer>ساخته‌شده با ❤ برای دانشجویان ایرانی مقیم خارج از کشور</footer>
+  </main>
+</body>
+</html>

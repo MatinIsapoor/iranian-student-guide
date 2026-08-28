@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --night: #142236;
+  --lapis: #1e3a5f;
+  --turquoise: #16888a;
+  --turquoise-light: #eaf6f5;
+  --gold: #b8873a;
+  --gold-light: #f7ead1;
+  --paper: #faf8f4;
+  --card: #ffffff;
+  --ink: #1c2b3a;
+  --muted: #66727d;
+  --border: #e7e2d6;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  direction: rtl;
+  background: var(--paper);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Header: calm, no busy pattern, a single thin ornamental rule ----- */
+header {
+  background: var(--night);
+  color: white;
+  padding: 52px 20px 36px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  border: 1px solid rgba(184, 135, 58, 0.5);
+  border-radius: 999px;
+  padding: 5px 18px;
+  margin-bottom: 18px;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+header p {
+  margin: 0 auto;
+  color: #a9c3c2;
+  font-size: 0.98rem;
+  max-width: 480px;
+}
+
+/* thin ornamental divider under the header, three small diamonds */
+.ornament {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.ornament span {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.85;
+}
+
+.ornament .line {
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: none;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 16px 60px;
+}
+
+.breadcrumb {
+  margin-bottom: 22px;
+  font-size: 0.87rem;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--turquoise);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ----- Cards ----- */
+.card-list {
+  display: grid;
+  gap: 13px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 17px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(20, 34, 54, 0.08);
+  border-color: var(--turquoise);
+}
+
+.card .flag {
+  font-size: 1.7rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--turquoise-light);
+  border-radius: 12px;
+}
+
+.card h3 {
+  margin: 0 0 3px 0;
+  color: var(--lapis);
+  font-size: 1.03rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+/* ----- Guide items ----- */
+.guide-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.guide-item::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  right: 0;
+  width: 3px;
+  background: var(--turquoise);
+  border-radius: 3px;
+}
+
+.guide-item h3 {
+  margin: 0 0 10px 0;
+  color: var(--lapis);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.guide-item p {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.95;
+  font-size: 0.96rem;
+}
+
+.guide-item p a {
+  color: var(--turquoise);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(22, 136, 138, 0.35);
+  font-weight: 600;
+  transition: border-color 0.15s ease;
+}
+
+.guide-item p a:hover {
+  border-color: var(--turquoise);
+}
+
+.guide-item .source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--turquoise);
+  background: var(--turquoise-light);
+  border-radius: 999px;
+  padding: 5px 14px;
+  text-decoration: none;
+}
+
+.featured-card {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--card) 55%);
+  margin-bottom: 30px;
+}
+
+.featured-card .flag {
+  background: var(--gold-light);
+}
+
+/* ----- Section title bar ----- */
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.section-title h2 {
+  margin: 0;
+  color: var(--lapis);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.section-title .count {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ----- Category icon variants on country page ----- */
+.card .icon-shopping { background: var(--turquoise-light); }
+.card .icon-housing { background: var(--gold-light); }
+
+footer {
+  text-align: center;
+  padding: 30px 16px 44px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}

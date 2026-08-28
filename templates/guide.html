@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ category.title }} - {{ country.name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <span class="eyebrow">{{ country.flag }} {{ country.name }}</span>
+      <h1>{{ category.title }}</h1>
+    </div>
+  </header>
+  <main>
+    <div class="breadcrumb">
+      <a href="{{ url_for('index') }}">لیست کشورها</a> ›
+      <a href="{{ url_for('country_page', country_code=country_code) }}">{{ country.name }}</a>
+    </div>
+    {% for item in category['items'] %}
+    <div class="guide-item">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.content | linkify }}</p>
+      {% if item.link %}
+      <a class="source-link" href="{{ item.link }}" target="_blank" rel="noopener">صفحه‌ی اصلی</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </main>
+</body>
+</html>
