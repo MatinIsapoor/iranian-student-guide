@@ -78,6 +78,3 @@ def category_page(country_code, category):
         category=cat_data,
     )
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
