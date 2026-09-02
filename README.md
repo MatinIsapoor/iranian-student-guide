@@ -24,7 +24,7 @@ A Flask-based web application that helps Iranian students find practical informa
 
 ## 📁 Project Structure
 
-```text
+text
 iranian-student-guide/
 ├── data/
 │   └── guides.json
@@ -34,6 +34,7 @@ iranian-student-guide/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
 🎯 Project Goal
 
 The goal of this project is to provide Iranian students with useful and practical information about studying and living abroad in one accessible place.
@@ -57,4 +58,4 @@ More countries, guides, information, and features will be added over time.
 
 Matin Isapoor
 
-GitHub Profile
+[GitHub Profile](https://github.com/MatinIsapoor)
