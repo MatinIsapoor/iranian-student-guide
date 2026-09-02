@@ -8,19 +8,19 @@ A Flask-based web application that helps Iranian students find practical informa
 
 ## ✨ Features
 
-- 🌍 Country-based guides
-- 📚 Categorized information
-- 🏠 Housing information
-- 🛍️ Shopping information
-- 🔗 Useful external resources
-- 📱 Responsive web interface
+* 🌍 Country-based guides
+* 📚 Categorized information
+* 🏠 Housing information
+* 🛍️ Shopping information
+* 🔗 Useful external resources
+* 📱 Responsive web interface
 
 ## 🛠️ Tech Stack
 
-- 🐍 Python
-- 🌐 Flask
-- 🎨 HTML & CSS
-- 📄 JSON
+* 🐍 Python
+* 🌐 Flask
+* 🎨 HTML & CSS
+* 📄 JSON
 
 ## 📁 Project Structure
 
@@ -50,15 +50,19 @@ More countries, guides, information, and features will be added over time.
 
 ## 🔮 Future Plans
 
-- 🌍 Add more countries
-- 📚 Expand existing guides
-- 🔎 Add search functionality
-- 🎨 Improve the user interface
-- 📱 Improve mobile experience
-- 🚀 Continue improving the online version
+* 🌍 Add more countries
+* 📚 Expand existing guides
+* 🔎 Add search functionality
+* 🎨 Improve the user interface
+* 📱 Improve mobile experience
+* 🚀 Continue improving the online version
 
 ## 👨‍💻 Author
 
 **Matin Isapoor**
 
 [GitHub Profile](https://github.com/MatinIsapoor)
+
+---
+
+⭐ If you find this project useful, consider giving it a star!
